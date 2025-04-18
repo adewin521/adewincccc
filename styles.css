@@ -17,7 +17,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;
     margin-bottom: 40px;
 }
@@ -38,6 +38,10 @@ body {
 
 .lebron {
     border: 3px solid #552583;
+}
+
+.draymond {
+    border: 3px solid #1D428A;
 }
 
 /* 卡片头部 */
@@ -61,6 +65,10 @@ body {
     color: #552583;
 }
 
+.draymond .title {
+    color: #1D428A;
+}
+
 .subtitle {
     font-size: 1.4em;
     font-style: italic;
@@ -72,6 +80,10 @@ body {
 
 .lebron .subtitle {
     color: #FDB927;
+}
+
+.draymond .subtitle {
+    color: #FFC72C;
 }
 
 /* 卡片内容 */
@@ -133,6 +145,10 @@ body {
     color: #552583;
 }
 
+.draymond .value {
+    color: #1D428A;
+}
+
 .achievements {
     background: #f8f9fa;
     padding: 20px;
@@ -150,6 +166,10 @@ body {
 
 .lebron .achievements h3 {
     color: #552583;
+}
+
+.draymond .achievements h3 {
+    color: #1D428A;
 }
 
 .achievements ul {
@@ -190,6 +210,10 @@ body {
     background: #552583;
 }
 
+.draymond .stat-item {
+    background: #1D428A;
+}
+
 .stat-value {
     display: block;
     font-size: 1.8em;
@@ -205,37 +229,13 @@ body {
     color: #FDB927;
 }
 
+.draymond .stat-value {
+    color: #FFC72C;
+}
+
 .stat-label {
     font-size: 0.9em;
     opacity: 0.9;
-}
-
-/* 对比评价部分 */
-.comparison-section {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.comparison-section h2 {
-    text-align: center;
-    color: #333;
-    font-size: 2.2em;
-    margin-bottom: 30px;
-}
-
-.comparison-content {
-    color: #444;
-    line-height: 1.8;
-}
-
-.comparison-content p {
-    margin-bottom: 20px;
-    text-indent: 2em;
-    font-size: 1.1em;
 }
 
 /* 响应式设计 */
@@ -266,14 +266,6 @@ body {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-
-    .comparison-section {
-        padding: 20px;
-    }
-
-    .comparison-section h2 {
-        font-size: 1.8em;
-    }
 }
 
 /* 动画效果 */
@@ -288,6 +280,6 @@ body {
     }
 }
 
-.player-card, .comparison-section {
+.player-card {
     animation: fadeIn 0.8s ease-out;
 }
