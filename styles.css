@@ -44,6 +44,10 @@ body {
     border: 3px solid #1D428A;
 }
 
+.kyrie {
+    border: 3px solid #00538C;
+}
+
 /* 卡片头部 */
 .poster-header {
     text-align: center;
@@ -69,6 +73,10 @@ body {
     color: #1D428A;
 }
 
+.kyrie .title {
+    color: #00538C;
+}
+
 .subtitle {
     font-size: 1.4em;
     font-style: italic;
@@ -84,6 +92,10 @@ body {
 
 .draymond .subtitle {
     color: #FFC72C;
+}
+
+.kyrie .subtitle {
+    color: #002B5E;
 }
 
 /* 卡片内容 */
@@ -149,6 +161,10 @@ body {
     color: #1D428A;
 }
 
+.kyrie .value {
+    color: #00538C;
+}
+
 .achievements {
     background: #f8f9fa;
     padding: 20px;
@@ -170,6 +186,10 @@ body {
 
 .draymond .achievements h3 {
     color: #1D428A;
+}
+
+.kyrie .achievements h3 {
+    color: #00538C;
 }
 
 .achievements ul {
@@ -214,6 +234,10 @@ body {
     background: #1D428A;
 }
 
+.kyrie .stat-item {
+    background: #00538C;
+}
+
 .stat-value {
     display: block;
     font-size: 1.8em;
@@ -231,6 +255,10 @@ body {
 
 .draymond .stat-value {
     color: #FFC72C;
+}
+
+.kyrie .stat-value {
+    color: #002B5E;
 }
 
 .stat-label {
