@@ -48,6 +48,14 @@ body {
     border: 3px solid #00538C;
 }
 
+.durant {
+    border: 3px solid #1D1160;
+}
+
+.butler {
+    border: 3px solid #98002E;
+}
+
 /* 卡片头部 */
 .poster-header {
     text-align: center;
@@ -77,6 +85,14 @@ body {
     color: #00538C;
 }
 
+.durant .title {
+    color: #1D1160;
+}
+
+.butler .title {
+    color: #98002E;
+}
+
 .subtitle {
     font-size: 1.4em;
     font-style: italic;
@@ -96,6 +112,14 @@ body {
 
 .kyrie .subtitle {
     color: #002B5E;
+}
+
+.durant .subtitle {
+    color: #E56020;
+}
+
+.butler .subtitle {
+    color: #F9A01B;
 }
 
 /* 卡片内容 */
@@ -165,6 +189,14 @@ body {
     color: #00538C;
 }
 
+.durant .value {
+    color: #1D1160;
+}
+
+.butler .value {
+    color: #98002E;
+}
+
 .achievements {
     background: #f8f9fa;
     padding: 20px;
@@ -190,6 +222,14 @@ body {
 
 .kyrie .achievements h3 {
     color: #00538C;
+}
+
+.durant .achievements h3 {
+    color: #1D1160;
+}
+
+.butler .achievements h3 {
+    color: #98002E;
 }
 
 .achievements ul {
@@ -238,6 +278,14 @@ body {
     background: #00538C;
 }
 
+.durant .stat-item {
+    background: #1D1160;
+}
+
+.butler .stat-item {
+    background: #98002E;
+}
+
 .stat-value {
     display: block;
     font-size: 1.8em;
@@ -259,6 +307,14 @@ body {
 
 .kyrie .stat-value {
     color: #002B5E;
+}
+
+.durant .stat-value {
+    color: #E56020;
+}
+
+.butler .stat-value {
+    color: #F9A01B;
 }
 
 .stat-label {
