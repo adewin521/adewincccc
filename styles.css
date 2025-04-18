@@ -1,0 +1,205 @@
+/* 重置默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #1D428A;  /* 勇士队蓝色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 海报容器 */
+.poster-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 知识卡片主体 */
+.player-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 卡片头部 */
+.poster-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.title {
+    font-size: 2.8em;
+    color: #1D428A;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.4em;
+    color: #FFC72C;  /* 勇士队金色 */
+    font-style: italic;
+}
+
+/* 卡片内容 */
+.poster-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.poster-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.player-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.player-image:hover {
+    transform: scale(1.05);
+}
+
+.poster-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.player-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.label {
+    color: #666;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.value {
+    color: #1D428A;
+    font-weight: 500;
+}
+
+.achievements {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.achievements h3 {
+    color: #1D428A;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.achievements ul {
+    list-style-position: inside;
+    color: #444;
+}
+
+.achievements li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* 底部数据统计 */
+.poster-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 15px;
+    background: #1D428A;
+    border-radius: 10px;
+    color: white;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #FFC72C;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .poster-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .poster {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 2em;
+    }
+    
+    .poster-image {
+        height: 300px;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.player-card {
+    animation: fadeIn 0.8s ease-out;
+}
