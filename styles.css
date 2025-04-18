@@ -7,22 +7,22 @@
 
 body {
     font-family: 'Microsoft YaHei', sans-serif;
-    background-color: #1D428A;  /* 勇士队蓝色 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #1D428A 0%, #000000 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* 海报容器 */
-.poster-container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
+/* 卡片容器 */
+.cards-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-/* 知识卡片主体 */
+/* 球员卡片 */
 .player-card {
     background: white;
     border-radius: 20px;
@@ -30,6 +30,14 @@ body {
     padding: 40px;
     position: relative;
     overflow: hidden;
+}
+
+.curry {
+    border: 3px solid #FFC72C;
+}
+
+.lebron {
+    border: 3px solid #552583;
 }
 
 /* 卡片头部 */
@@ -41,21 +49,35 @@ body {
 
 .title {
     font-size: 2.8em;
-    color: #1D428A;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+.curry .title {
+    color: #1D428A;
+}
+
+.lebron .title {
+    color: #552583;
+}
+
 .subtitle {
     font-size: 1.4em;
-    color: #FFC72C;  /* 勇士队金色 */
     font-style: italic;
+}
+
+.curry .subtitle {
+    color: #FFC72C;
+}
+
+.lebron .subtitle {
+    color: #FDB927;
 }
 
 /* 卡片内容 */
 .poster-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
     margin-bottom: 30px;
 }
@@ -103,9 +125,12 @@ body {
     margin-right: 10px;
 }
 
-.value {
+.curry .value {
     color: #1D428A;
-    font-weight: 500;
+}
+
+.lebron .value {
+    color: #552583;
 }
 
 .achievements {
@@ -115,9 +140,16 @@ body {
 }
 
 .achievements h3 {
-    color: #1D428A;
     margin-bottom: 15px;
     font-size: 1.3em;
+}
+
+.curry .achievements h3 {
+    color: #1D428A;
+}
+
+.lebron .achievements h3 {
+    color: #552583;
 }
 
 .achievements ul {
@@ -146,9 +178,16 @@ body {
 
 .stat-item {
     padding: 15px;
-    background: #1D428A;
     border-radius: 10px;
     color: white;
+}
+
+.curry .stat-item {
+    background: #1D428A;
+}
+
+.lebron .stat-item {
+    background: #552583;
 }
 
 .stat-value {
@@ -156,7 +195,14 @@ body {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 5px;
+}
+
+.curry .stat-value {
     color: #FFC72C;
+}
+
+.lebron .stat-value {
+    color: #FDB927;
 }
 
 .stat-label {
@@ -164,13 +210,47 @@ body {
     opacity: 0.9;
 }
 
+/* 对比评价部分 */
+.comparison-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-section h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.comparison-content {
+    color: #444;
+    line-height: 1.8;
+}
+
+.comparison-content p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+    font-size: 1.1em;
+}
+
 /* 响应式设计 */
-@media (max-width: 768px) {
-    .poster-content {
+@media (max-width: 1200px) {
+    .cards-container {
         grid-template-columns: 1fr;
     }
-    
-    .poster {
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .player-card {
         padding: 20px;
     }
     
@@ -186,6 +266,14 @@ body {
         grid-template-columns: 1fr;
         gap: 10px;
     }
+
+    .comparison-section {
+        padding: 20px;
+    }
+
+    .comparison-section h2 {
+        font-size: 1.8em;
+    }
 }
 
 /* 动画效果 */
@@ -200,6 +288,6 @@ body {
     }
 }
 
-.player-card {
+.player-card, .comparison-section {
     animation: fadeIn 0.8s ease-out;
 }
